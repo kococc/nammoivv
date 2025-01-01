@@ -1,6 +1,3 @@
-import time
-from time import sleep
-import os, sys, requests
 from colorama import Fore, init
 import random
 
