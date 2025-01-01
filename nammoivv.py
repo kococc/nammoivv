@@ -1,3 +1,4 @@
+import sleep
 from colorama import Fore, init
 import random
 
