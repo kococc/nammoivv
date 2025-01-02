@@ -48,6 +48,7 @@ def main():
     generated_key = create_key_from_ip(ip_address)
 
     # Hiển thị thông tin với màu sắc ngẫu nhiên (đậm)
+    print(get_random_color() + "zalo 0943040079")
     print(get_random_color() + "ib chủ code để lấy key")
     print(get_random_color() + "key dùng vv")
     print(get_random_color() + "key đổi theo ip mạng và đã được enc")
