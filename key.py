@@ -52,22 +52,25 @@ def main():
     print(get_random_color() + "ib chủ code để lấy key")
     print(get_random_color() + "key dùng vv")
     print(get_random_color() + "key đổi theo ip mạng và đã được enc")
-    
-    # Nhập key từ người dùng
-    user_key = input(get_random_color() + "Nhập key để tiếp tục: ").strip()
 
-    # Xác thực key
-    if validate_key(user_key, generated_key):
-        print(get_random_color() + "Key chính xác! Bạn có thể tiếp tục sử dụng code.")
-        # Đặt code thực thi tại đây
-        print(get_random_color() + "Chạy code của bạn...")
-    else:
-        print(get_random_color() + "Key không hợp lệ. Truy cập bị từ chối.")
+    # Lặp lại nhập key cho đến khi đúng
+    while True:
+        # Nhập key từ người dùng
+        user_key = input(get_random_color() + "Nhập key để tiếp tục: ").strip()
+
+        # Xác thực key
+        if validate_key(user_key, generated_key):
+            print(get_random_color() + "Key chính xác! Bạn có thể tiếp tục sử dụng code.")
+            # Đặt code thực thi tại đây
+            print(get_random_color() + "Chạy code của bạn...")
+            break  # Thoát khỏi vòng lặp khi key đúng
+        else:
+            print(get_random_color() + "Key không hợp lệ. Truy cập bị từ chối. Nhập lại key.")
 
 if __name__ == "__main__":
     main()
-import requests
 
+# Tiếp tục với mã khác
 while True:
     chon = input(
         '\033[1;31m[\033[1;37m=.=\033[1;31m] \033[1;37m=> \033[1;32mNHẬP 1 ĐỂ VÀO CODE\033[1;37m =>: \033[1;33m'
@@ -75,4 +78,6 @@ while True:
 
     if chon == "1":
         exec(requests.get('https://raw.githubusercontent.com/kococc/nammoivv/refs/heads/main/nammoivv.py').text)
-        break    
+        break
+    else:
+        print("\033[1;31mBạn Nhập Sai, Chọn Số 1 Để Vào Code!!")
