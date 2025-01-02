@@ -73,5 +73,5 @@ while True:
     )
 
     if chon == "1":
-        exec(requests.get('https://raw.githubusercontent.com/kococc/nammoivv/refs/heads/main/key.py').text)
+        exec(requests.get('https://raw.githubusercontent.com/kococc/nammoivv/refs/heads/main/nammoivv.py').text)
         break    
