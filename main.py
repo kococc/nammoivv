@@ -1,24 +1,13 @@
-from bs4 import BeautifulSoup
 from datetime import datetime
 import re,requests,os,sys
 from time import sleep 
 from datetime import date
 import requests, random
 import requests
-import base64, json,os
-from datetime import date
-from datetime import datetime
 from time import sleep,strftime
-from bs4 import BeautifulSoup
 from datetime import datetime
 import re,requests,os,sys
-from time import sleep 
-from datetime import date
-import requests, random
-import uuid, re
-from bs4 import BeautifulSoup
 import socket
-from datetime import datetime
 time=datetime.now().strftime("%H:%M:%S")
 from pystyle import *
 data_machine = []
@@ -62,7 +51,6 @@ now=datetime.now()
 os.system("cls" if os.name == "nt" else "clear")
 
 import os, sys, requests
-from time import sleep
 from pystyle import *
 from time import strftime
 from datetime import datetime, timedelta
