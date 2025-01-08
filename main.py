@@ -21,7 +21,6 @@ import socket
 from datetime import datetime
 time=datetime.now().strftime("%H:%M:%S")
 from pystyle import *
-os.system('pip install requests')
 data_machine = []
 today = date.today()
 now = datetime.now()
