@@ -51,7 +51,7 @@ def main():
     print(get_random_color() + ("Ip Của Bạn Là :{ip_address}"))
     print(get_random_color() + "zalo 0943040079")
     print(get_random_color() + "ib chủ code để lấy key")
-    print(get_random_color() + "key dùng vv")
+    print(get_random_color() + "key dùng vv chắc thế")
     print(get_random_color() + "key đổi theo ip mạng và đã được enc")
 
     # Lặp lại nhập key cho đến khi đúng
