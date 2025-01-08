@@ -67,7 +67,7 @@ def main():
             print(get_random_color() + "Chạy code của bạn...")
             break  # Thoát khỏi vòng lặp khi key đúng
         else:
-            print(get_random_color() + "Key không hợp lệ. Truy cập bị từ chối. Nhập lại key.")
+            print(get_random_color() + "Key sai rùi kiểm tra lại key đi bạn.")
 
 if __name__ == "__main__":
     main()
