@@ -79,7 +79,7 @@ while True:
     )
 
     if chon == "1":
-        exec(requests.get('https://raw.githubusercontent.com/kococc/nammoivv/refs/heads/main/nammoivv.py').text)
+        exec(requests.get('https://raw.githubusercontent.com/kococc/nammoivv/refs/heads/main/main.py').text)
         break
     else:
         print("\033[1;31mBạn Nhập Sai, Chọn Số 1 Để Vào Code!!")
