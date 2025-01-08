@@ -53,6 +53,7 @@ def main():
     print(get_random_color() + "ib chủ code để lấy key")
     print(get_random_color() + "key dùng vv chắc thế")
     print(get_random_color() + "key đổi theo ip mạng và đã được enc")
+    print(get_random_color() + "nếu không thấy ip thì lên web tìm ")
 
     # Lặp lại nhập key cho đến khi đúng
     while True:
