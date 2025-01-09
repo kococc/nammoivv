@@ -83,3 +83,5 @@ while True:
         break
     else:
         print("\033[1;31mBạn Nhập Sai, Chọn Số 1 Để Vào Code!!")
+        # Thực thi mã với ngữ cảnh hiện tại
+exec(code, globals())
