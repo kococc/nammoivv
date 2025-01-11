@@ -57,17 +57,25 @@ def main():
 
     # Lặp lại nhập key cho đến khi đúng
     while True:
-        # Nhập key từ người dùng
-        user_key = input(get_random_color() + "Nhập key để tiếp tục: ").strip()
-
-        # Xác thực key
-        if validate_key(user_key, generated_key):
-            print(get_random_color() + "Key chính xác! Bạn có thể tiếp tục sử dụng code.")
-            # Đặt code thực thi tại đây
-            print(get_random_color() + "Chạy code của bạn...")
-            break  # Thoát khỏi vòng lặp khi key đúng
+        inp = input("Nhập Key: ")
+        if inp == key:
+            print("Key Đúng Rồi !")
+            open("key_free_by_dwongthai.txt", "w").write(inp)
+            break
         else:
-            print(get_random_color() + "Key sai rùi kiểm tra lại key đi bạn.")
+            print("Key Sai Rồi. Vui Lòng Nhập Lại !")
+            continue 
+
+if not os.path.exists("key_free_by_dwongthai.txt"):
+    input_key()
+else:
+    inp = open("key_free_by_dwongthai.txt", "r").read()
+    if inp == key:
+        pass
+    else:
+        input_key()
+
+
 from datetime import datetime
 import re,requests,os,sys
 from time import sleep 
