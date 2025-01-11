@@ -1,8 +1,8 @@
 import base64
-import requests
 import hashlib
 import socket
 import random
+import os
 from colorama import Fore, Style, init
 
 # Khởi tạo colorama
@@ -48,33 +48,39 @@ def main():
     generated_key = create_key_from_ip(ip_address)
 
     # Hiển thị thông tin với màu sắc ngẫu nhiên (đậm)
-    print(get_random_color() + f"Ip Của Bạn Là :{ip_address}")
-    print(get_random_color() + "zalo 0943040079")
-    print(get_random_color() + "ib chủ code để lấy key")
-    print(get_random_color() + "key dùng vv chắc thế")
-    print(get_random_color() + "key đổi theo ip mạng và đã được enc")
-    print(get_random_color() + "nếu không thấy ip thì lên web tìm ")
+    print(get_random_color() + f"Ip Của Bạn Là: {ip_address}")
+    print(get_random_color() + "Zalo: 0943040079")
+    print(get_random_color() + "Liên hệ chủ code để lấy key")
+    print(get_random_color() + "Key sử dụng vv chắc thế")
+    print(get_random_color() + "Key thay đổi theo IP mạng và đã được mã hóa")
+    print(get_random_color() + "Nếu không thấy IP thì lên web tìm")
 
-    # Lặp lại nhập key cho đến khi đúng
+    key_file = "key_free_by_dwongthai.txt"
+
+    # Kiểm tra sự tồn tại của file lưu key
+    if os.path.exists(key_file):
+        with open(key_file, "r") as file:
+            saved_key = file.read().strip()
+        if validate_key(saved_key, generated_key):
+            print(get_random_color() + "Key hợp lệ!")
+            return
+        else:
+            print(get_random_color() + "Key Sai")
+
+    # Yêu cầu người dùng nhập key nếu không có hoặc không hợp lệ
     while True:
-        inp = input("Nhập Key: ")
-        if inp == key:
-            print("Key Đúng Rồi !")
-            open("key_free_by_dwongthai.txt", "w").write(inp)
+        inp = input(get_random_color() + "Nhập Key: ").strip()
+        if validate_key(inp, generated_key):
+            print(get_random_color() + "Key Đúng Rùi")
+            with open(key_file, "w") as file:
+                file.write(inp)
             break
         else:
-            print("Key Sai Rồi. Vui Lòng Nhập Lại !")
-            continue 
+            print(get_random_color() + "key Sai")
 
-if not os.path.exists("key_free_by_dwongthai.txt"):
-    input_key()
-else:
-    inp = open("key_free_by_dwongthai.txt", "r").read()
-    if inp == key:
-        pass
-    else:
-        input_key()
-
+if __name__ == "__main__":
+    main()
+#Phần Code Tiếp Theo Ở Đây
 
 from datetime import datetime
 import re,requests,os,sys
