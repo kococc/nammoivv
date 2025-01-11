@@ -68,24 +68,6 @@ def main():
             break  # Thoát khỏi vòng lặp khi key đúng
         else:
             print(get_random_color() + "Key sai rùi kiểm tra lại key đi bạn.")
-
-if __name__ == "__main__":
-    main()
-
-# Tiếp tục với mã khác
-while True:
-    chon = input(
-        '\033[1;31m[\033[1;37m=.=\033[1;31m] \033[1;37m=> \033[1;32mNHẬP 1 ĐỂ VÀO CODE\033[1;37m =>: \033[1;33m'
-    )
-
-    if chon == "1":
-        exec(requests.get('https://raw.githubusercontent.com/kococc/nammoivv/refs/heads/main/main.py').text)
-        break
-    else:
-        print("\033[1;31mBạn Nhập Sai, Chọn Số 1 Để Vào Code!!")
-        # Thực thi mã với ngữ cảnh hiện tại
-exec(code, globals())
-
 from datetime import datetime
 import re,requests,os,sys
 from time import sleep 
